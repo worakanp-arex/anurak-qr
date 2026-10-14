@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="th" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ANURAK KKU — สร้างคิวอาร์ แบ่งปันสิ่งดี ๆ</title>
+  <meta name="description" content="เครื่องมือสร้างคิวอาร์โค้ดสำหรับการแบ่งปัน จากชมรมอนุรักษ์สภาพแวดล้อม มหาวิทยาลัยขอนแก่น ใช้ง่าย ไม่มีโฆษณา">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@500;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="ANURAK KKU หน้าแรก">
+      <img class="brand-logo" src="assets/anurak-logo.png" width="104" height="120" alt="โลโก้ 50 ปี ANURAK KKU">
+      <span class="brand-copy"><strong>ชมรมอนุรักษ์สภาพแวดล้อม</strong><span>มหาวิทยาลัยขอนแก่น</span></span>
+    </a>
+    <a class="nav-link" href="#create">สร้างคิวอาร์ <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> ANURAK KKU <span class="eyebrow-divider">/</span> CLUB TOOLS</p>
+      <h1 id="hero-title">สร้างคิวอาร์<br><span>แบ่งปันสิ่งดี ๆ</span></h1>
+
+    </div>
+    <div class="hero-art">
+      <div class="portrait-backdrop" aria-hidden="true"></div>
+      <svg class="leaf-art" viewBox="0 0 120 180" fill="none" aria-hidden="true"><path d="M28 170C30 111 55 65 100 20M45 113C10 97 5 68 12 44C44 51 63 74 55 95M67 79C61 42 81 17 112 9C119 42 99 67 78 68M32 144C64 151 88 134 98 110C66 104 44 115 32 144" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <img class="portrait" src="assets/anurak-portrait.png" width="800" height="1200" alt="สมาชิกชมรมอนุรักษ์ในชุดนักศึกษา" fetchpriority="high">
+      <span class="portrait-tag"><span aria-hidden="true"></span>ig:arrexx_ </span>
+      <span class="art-caption">PEOPLE · NATURE · CONNECTION</span>
+    </div>
+  </section>
+
+  <section class="workspace" id="create" aria-labelledby="workspace-title">
+    <div class="workspace-heading"><div><p class="eyebrow">MAKE A LITTLE CONNECTION</p><h2 id="workspace-title">คิวอาร์ของคุณ เริ่มตรงนี้</h2></div><span class="workspace-number" aria-hidden="true">01 — 03</span></div>
+  <div class="grid">
+    <section class="editor" aria-label="ตั้งค่าคิวอาร์โค้ด">
+      <p class="field-heading"><span>01</span> </p>
+      <div class="tabs" role="tablist" aria-label="ประเภทคิวอาร์โค้ด">
+        <button class="tab" role="tab" data-mode="link" aria-selected="true" aria-controls="panel-link" id="tab-link">ลิงก์ / ข้อความ</button>
+       
+      </div>
+
+      <div class="panel" data-panel="link" role="tabpanel" aria-labelledby="tab-link" id="panel-link">
+        <label>ลิงก์หรือข้อความ
+          <textarea id="text" spellcheck="false">https://www.google.com/maps</textarea>
+          <span class="hint">ตัวอย่างข้างบนแก้ได้เลย ใส่ได้ทั้งลิงก์ ข้อความภาษาไทย เบอร์โทร</span>
+        </label>
+      </div>
+
+      <div class="panel" data-panel="pp" role="tabpanel" aria-labelledby="tab-pp" id="panel-pp" hidden>
+        <label>เบอร์มือถือ / เลขบัตรประชาชน / เลข e‑Wallet
+          <input type="tel" id="ppId" inputmode="numeric" value="0812345678">
+          <span class="hint">ตัวอย่างเบอร์สมมติ เปลี่ยนเป็นของคุณก่อนใช้จริง</span>
+        </label>
+        <div class="row">
+          <label>จำนวนเงิน (บาท)
+            <input type="number" id="ppAmt" min="0" step="0.01" placeholder="เว้นว่าง = ให้คนโอนกรอกเอง">
+          </label>
+          <label>ชื่อที่แสดงใต้โค้ด
+            <input type="text" id="ppName" placeholder="เช่น ร้านป้านก">
+          </label>
+        </div>
+      </div>
+
+      <div class="panel" data-panel="wifi" role="tabpanel" aria-labelledby="tab-wifi" id="panel-wifi" hidden>
+        <div class="row">
+          <label>ชื่อ Wi‑Fi (SSID)<input type="text" id="ssid" value="บ้านเรา_5G"></label>
+          <label>รหัสผ่าน<input type="text" id="wpass" value="12345678" autocomplete="off"></label>
+        </div>
+        <div class="radio" role="radiogroup" aria-label="การเข้ารหัส">
+          <label><input type="radio" name="wsec" id="wsec-wpa" value="WPA" checked> WPA/WPA2</label>
+          <label><input type="radio" name="wsec" id="wsec-wep" value="WEP"> WEP</label>
+          <label><input type="radio" name="wsec" id="wsec-none" value="nopass"> ไม่มีรหัส</label>
+          <label><input type="checkbox" id="whidden"> เครือข่ายซ่อน</label>
+        </div>
+      </div>
+
+      <details>
+        <summary><span class="step-number">02</span> ปรับสีและความทนทาน <span class="summary-plus" aria-hidden="true">+</span></summary>
+        <div class="row">
+          <label>สีโค้ด<input type="color" id="fg" value="#176b70"></label>
+          <label>สีพื้น<input type="color" id="bg" value="#ffffff"></label>
+          <label>ความทนทาน
+            <select id="ecl">
+              <option value="L">ต่ำ (โค้ดเล็ก)</option>
+              <option value="M" selected>ปานกลาง</option>
+              <option value="Q">สูง</option>
+              <option value="H">สูงสุด (พิมพ์ติดผนัง)</option>
+            </select>
+          </label>
+        </div>
+      </details>
+      <div class="privacy-note"><span aria-hidden="true">↳</span><p>ข้อมูลที่กรอกใช้สร้างโค้ดในเบราว์เซอร์ของคุณ<br><span>พร้อมแชร์เมื่อไรก็ได้ คิวอาร์ไม่มีวันหมดอายุ</span></p></div>
+    </section>
+
+    <aside class="label-card" aria-live="polite">
+      <div class="qr-heading"><span class="eyebrow">YOUR QR CODE</span><span class="ready-indicator"><i aria-hidden="true"></i> พรีวิว</span></div>
+      <div class="qr-box"><img id="qrImg" alt="คิวอาร์โค้ด"></div>
+      <p class="caption" id="caption"></p>
+      <p class="msg" id="msg" hidden></p>
+      <div class="btns">
+        <button class="act" id="copyImg">คัดลอกรูป</button>
+        <button class="act ghost" id="copyText">คัดลอกข้อมูลในโค้ด</button>
+      </div>
+      <p class="note">บันทึกรูป: กดค้างที่รูป (มือถือ) หรือคลิกขวา → บันทึกรูปภาพ (คอม)</p>
+      <div>
+        <p class="note">ข้อมูลที่อยู่ในโค้ด</p>
+        <div class="payload" id="payload"></div>
+      </div>
+    </aside>
+  </div>
+  </section>
+  </main>
+
+  <footer class="site-footer"><div><strong>ANURAK KKU<span aria-hidden="true"> ✳</span></strong><p>พื้นที่เล็ก ๆ ของการแบ่งปันและดูแลสิ่งรอบตัว</p></div><p>Environmental Conservation Club<br>Khon Kaen University</p></footer>
+</div>
+
+<!-- ไลบรารีสร้างคิวอาร์ (qrcode-generator) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
